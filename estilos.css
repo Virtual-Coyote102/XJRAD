@@ -1,0 +1,141 @@
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.header, .secciones, .footer {
+  text-align: center;
+}
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+.logo {
+  width: 6rem;
+  height: 6rem;
+  color: #2563eb;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.badge {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background: #facc15;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.titulo {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.subtitulo {
+  font-size: 1.25rem;
+  color: #374151;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+.secciones {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+.seccion {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+.seccion-header {
+  padding: 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.seccion-naranja { background: linear-gradient(to right, #facc15, #f97316); }
+.seccion-azul { background: linear-gradient(to right, #3b82f6, #4f46e5); }
+.seccion-morado { background: linear-gradient(to right, #4f46e5, #9333ea); }
+
+.lista {
+  padding: 1.5rem;
+  list-style: none;
+  text-align: left;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+.lista li::before {
+  content: "✓ ";
+  color: #22c55e;
+  font-weight: bold;
+}
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+.boton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.boton:hover {
+  transform: scale(1.05);
+}
+.azul { background: #2563eb; }
+.indigo { background: #4f46e5; }
+.blanco {
+  background: white;
+  color: #f97316;
+  border: 1px solid #f97316;
+}
+.nota {
+  font-size: 0.875rem;
+  color: #4b5563;
+  padding-bottom: 1rem;
+}
+.maestro {
+  margin-top: 4rem;
+  padding: 1.5rem;
+  background: linear-gradient(to right, #facc15, #f97316);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.texto {
+  color: white;
+  max-width: 500px;
+}
+.footer {
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
