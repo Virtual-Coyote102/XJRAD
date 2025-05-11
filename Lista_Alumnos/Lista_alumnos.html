@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas Alumnos</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
+</head>
+
+<body class="math-bg">
+  <div class="container">
+    <div class="seccion">
+      <div class="seccion-header seccion-naranja">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2>Listas de Alumnos</h2>
+          <a href="../Tablero_Maestro/Tablero_Maestro.html" style="color: white; text-decoration: none;">←</a>
+        </div>
+       </div>
+        <div class="accordion" id="clasesAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#clase1">
+            Clase: Nombre de la Clase 1
+        </button>
+        </h2>
+        <div id="clase1" class="accordion-collapse collapse" data-bs-parent="#clasesAccordion">
+        <div class="accordion-body">
+           <article>
+
+        <div style="padding: 2rem;"><!--Lista alumnos datos imp: Nombre - Actividades Resultas - Calificacion-->
+            <h3>Lista de Alumnos</h3>
+        <div class="tablaAlumnos">
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <thead class="table-warning">
+                <tr>
+                    <th>Nombre del Alumno</th>
+                    <th>Actividades Resueltas</th>
+                    <th>Calificación Actual</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Jose Pérez</td>
+                    <td>2</td>
+                    <td>5.3</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>6</td>
+                    <td>9.2</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <tr>
+                    <td>Carlos Ramírez</td>
+                    <td>4</td>
+                    <td>7.8</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <!-- Se pueden agregar más alumnos -->
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+        </article>
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#clase2">
+        Clase: Nombre de la Clase 2
+    </button>
+    </h2>
+    <div id="clase2" class="accordion-collapse collapse" data-bs-parent="#clasesAccordion">
+    <div class="accordion-body">
+        <article>
+        <div style="padding: 2rem;"><!--Lista alumnos datos imp: Nombre - Actividades Resultas - Calificacion-->
+            <h3>Lista de Alumnos</h3>
+        <div class="tablaAlumnos">
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <thead class="table-warning">
+                <tr>
+                    <th>Nombre del Alumno</th>
+                    <th>Actividades Resueltas</th>
+                    <th>Calificación Actual</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Jose Pérez</td>
+                    <td>2</td>
+                    <td>5.3</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>6</td>
+                    <td>9.2</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <tr>
+                    <td>Carlos Ramírez</td>
+                    <td>4</td>
+                    <td>7.8</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <!-- Se pueden agregar más alumnos -->
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+        </article>
+    </div>
+    </div>
+   </div>
+
+
+    <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../Administrador_Clases/Administrador_clases.js"></script>
+</body>
+</html>

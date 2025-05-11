@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+    <body class="math-bg">
+  <div class="container">
+    <div class="seccion">
+      <div class="seccion-header seccion-morado">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2>Mis Clases</h2>
+          <a href="../Tablero_Alumno/tablero_alumno.html" style="color: white; text-decoration: none;">←</a>
+        </div>
+      </div>
+
+    <div class="accordion" id="clasesAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#clase1">
+            Clase: Nombre de la Clase
+        </button>
+        </h2>
+        <div id="clase1" class="accordion-collapse collapse" data-bs-parent="#clasesAccordion">
+        <div class="accordion-body">
+           <article>
+        <div style="padding: 2rem;"><!--Datos generales-->
+          <h3>Datos Generales</h3>
+          <label>Nombre de Clase 
+          <p class="datos">Matemáricas Básicas</p> 
+        </label> <br>
+        <label>Grado Eductativo 
+          <p class="datos">3ro de primaria</p> 
+        </label> <br>
+        </label> <br>
+        </div>
+        </div>
+
+        <div style="padding: 2rem;"><!--Actividades disponibles botones para activar/desactivar actividad-->
+            <h3>Actividades</h3>
+             <button type="submit" class="boton indigo">Actividad 1</button>
+             <button type="submit" class="boton indigo">Actividad 2</button>
+        </div>
+        </article>
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#clase2">
+        Clase: Nombre de la Clase 2
+    </button>
+    </h2>
+    <div id="clase2" class="accordion-collapse collapse" data-bs-parent="#clasesAccordion">
+    <div class="accordion-body">
+                   <article>
+        <div style="padding: 2rem;"><!--Datos generales-->
+          <h3>Datos Generales</h3>
+          <label>Nombre de Clase 
+          <p class="datos">Matemáricas Básicas</p> 
+        </label> <br>
+        <label>Grado Eductativo 
+          <p class="datos">3ro de primaria</p> 
+        </label> <br>
+        </div>
+        </div>
+        <div style="padding: 2rem;"><!--Botones para realizar actividades-->
+            <h3 >Actividades</h3>
+             <button type="submit" class="boton indigo">Actividad 1</button>
+             <button type="submit" class="boton indigo">Actividad 2</button>
+        </div>
+        </article>
+    </div>
+
+
+    <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

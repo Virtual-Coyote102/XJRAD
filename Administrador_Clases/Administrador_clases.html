@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Clases</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="Administrador_clases.css">
+</head>
+
+<body class="math-bg">
+  <div class="container">
+    <div class="seccion">
+      <div class="seccion-header seccion-naranja">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2>Administrador de Clases</h2>
+          <a href="../Tablero_Maestro/Tablero_Maestro.html" style="color: white; text-decoration: none;">←</a>
+        </div>
+      </div>
+
+    <div class="accordion" id="clasesAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#clase1">
+            Clase: Nombre de la Clase
+        </button>
+        </h2>
+        <div id="clase1" class="accordion-collapse collapse" data-bs-parent="#clasesAccordion">
+        <div class="accordion-body">
+           <article>
+        <div style="padding: 2rem;"><!--Datos generales-->
+          <h3>Datos Generales</h3>
+          <label>Nombre de Clase 
+          <p class="datos">Matemáricas Básicas</p> 
+        </label> <br>
+        <label>Grado Eductativo 
+          <p class="datos">3ro de primaria</p> 
+        </label> <br>
+        <label>Código de Clase
+          <p class="datos">A6B7Z</p>
+        </label> <br>
+        </div>
+
+        <div style="padding: 2rem;"><!--Lista alumnos datos imp: Nombre - Actividades Resultas - Calificacion-->
+            <h3>Lista de Alumnos</h3>
+            <button class="boton blanco mb-3" onclick="toggleTabla(this)">Mostrar/Ocultar Lista de Alumnos</button>
+
+        <div class="tablaAlumnos" style="display: none;">
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <thead class="table-warning">
+                <tr>
+                    <th>Nombre del Alumno</th>
+                    <th>Actividades Resueltas</th>
+                    <th>Calificación Actual</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Jose Pérez</td>
+                    <td>2</td>
+                    <td>5.3</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>6</td>
+                    <td>9.2</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <tr>
+                    <td>Carlos Ramírez</td>
+                    <td>4</td>
+                    <td>7.8</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <!-- Se pueden agregar más alumnos -->
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+
+        <div style="padding: 2rem;"><!--Resultados generales datos imp: Promedio del grupo - Promedio de actividades contestadas - tiempo promedio por actividad-->
+            <h3>Resultados Generales</h3>
+            <label>Promedio Grupal
+            <p class="datos">Promedio</p> 
+            </label> <br>
+            <label>Promedio de Actividades Resueltas 
+            <p class="datos">X Actividades</p> 
+            </label> <br>
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <thead class="table-warning">
+                <tr>
+                    <th># Actividad</th>
+                    <th>Calificación Promedio</th>
+                    <th>Tiempo Promedio</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>92</td>
+                    <td>5:45 minutos</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>88</td>
+                    <td>7 minutos</td>
+                </tr>
+                </tbody>
+                </table>
+        </div>
+
+        <div><!--Actividades disponibles botones para activar/desactivar actividad-->
+            <h3>Actividades</h3>
+             <button type="submit" class="boton blanco">Actividad 1</button>
+             <button type="submit" class="boton blanco">Actividad 2</button>
+        </div>
+
+        <div><!--Boton de Eliminar clase-->
+            <h3>Eliminar Clase</h3>
+            <button type="button" class="btn btn-danger">Eliminar Clase</button>
+        </div>
+        </article>
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#clase2">
+        Clase: Nombre de la Clase
+    </button>
+    </h2>
+    <div id="clase2" class="accordion-collapse collapse" data-bs-parent="#clasesAccordion">
+    <div class="accordion-body">
+                   <article>
+        <div style="padding: 2rem;"><!--Datos generales-->
+          <h3>Datos Generales</h3>
+          <label>Nombre de Clase 
+          <p class="datos">Matemáricas Básicas</p> 
+        </label> <br>
+        <label>Grado Eductativo 
+          <p class="datos">3ro de primaria</p> 
+        </label> <br>
+        <label>Código de Clase
+          <p class="datos">A6B7Z</p>
+        </label> <br>
+        </div>
+
+        <div style="padding: 2rem;"><!--Lista alumnos datos imp: Nombre - Actividades Resultas - Calificacion-->
+            <h3>Lista de Alumnos</h3>
+            <button class="boton blanco mb-3" onclick="toggleTabla(this)">Mostrar/Ocultar Lista de Alumnos</button>
+
+        <div class="tablaAlumnos" style="display: none;">
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <thead class="table-warning">
+                <tr>
+                    <th>Nombre del Alumno</th>
+                    <th>Actividades Resueltas</th>
+                    <th>Calificación Actual</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Jose Pérez</td>
+                    <td>2</td>
+                    <td>5.3</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>6</td>
+                    <td>9.2</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <tr>
+                    <td>Carlos Ramírez</td>
+                    <td>4</td>
+                    <td>7.8</td>
+                    <td><button class="boton blanco btn-sm">Eliminar Alumno</button></td>
+                </tr>
+                <!-- Se pueden agregar más alumnos -->
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+
+        <div style="padding: 2rem;"><!--Resultados generales datos imp: Promedio del grupo - Promedio de actividades contestadas - tiempo promedio por actividad-->
+            <h3>Resultados Generales</h3>
+            <label>Promedio Grupal
+            <p class="datos">Promedio</p> 
+            </label> <br>
+            <label>Promedio de Actividades Resueltas 
+            <p class="datos">X Actividades</p> 
+            </label> <br>
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <thead class="table-warning">
+                <tr>
+                    <th># Actividad</th>
+                    <th>Calificación Promedio</th>
+                    <th>Tiempo Promedio</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>92</td>
+                    <td>5:45 minutos</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>88</td>
+                    <td>7 minutos</td>
+                </tr>
+                </tbody>
+                </table>
+        </div>
+
+        <div><!--Actividades disponibles botones para activar/desactivar actividad-->
+            <h3>Actividades</h3>
+             <button type="submit" class="boton blanco">Actividad 1</button>
+             <button type="submit" class="boton blanco">Actividad 2</button>
+        </div>
+
+        <div><!--Boton de Eliminar clase-->
+            <h3>Eliminar Clase</h3>
+            <button type="button" class="btn btn-danger">Eliminar Clase</button>
+        </div>
+        </article>
+    </div>
+
+    
+    </div> <!--Añadir Clase-->
+    <button style="margin: 1rem;" class="boton blanco btn-sm">Añadir Nueva Clase</button></td>
+  </div>
+
+  <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="Administrador_clases.js"></script>
+</body>
+</html>
