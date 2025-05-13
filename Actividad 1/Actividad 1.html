@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="Actividad 1.css">
+</head>
+
+<body class="math-bg">
+  <div class="container">
+    <div class="seccion">
+      <div class="seccion-header seccion-morado">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2>Actividad 1</h2>
+          <a href="../Tablero_Alumno/tablero_alumno.html" style="color: white; text-decoration: none;">←</a>
+        </div>
+      </div>
+
+    <div class="actividad">
+    <h4>Resuelve las operaciones para desbloquear colores</h4>
+    <div class="problemas">
+        <div class="problema">
+        <label>71 - 64 = <input type="number" data-color="1"></label> <!-- Café Oscuro -->
+        </div>
+        <div class="problema">
+        <label>93 - 90 = <input type="number" data-color="2"></label> <!-- Café Claro -->
+        </div>
+        <div class="problema">
+        <label>15589.257 x 0 = <input type="number" data-color="3"></label> <!-- Negro -->
+        </div>
+        <div class="problema">
+        <label>55 + 72 = <input type="number" data-color="4"></label> <!-- Rosa -->
+        </div>
+        <div class="problema">
+        <label>100 ÷ 4 = <input type="number" data-color="5"></label> <!-- Fondo -->
+        </div>
+        <label>35 + 14 = <input type="number" data-color="6"></label>
+        <!-- Agrega más según el diseño -->
+    </div>
+
+    <h4>Selecciona un color desbloqueado y colorea la imagen</h4>
+    <div class="colores">
+        <button class="color" data-color="1" style="background-color: #5C4033;" disabled></button>
+        <button class="color" data-color="2" style="background-color: #D2B48C;" disabled></button>
+        <button class="color" data-color="3" style="background-color: #000000;" disabled></button>
+        <button class="color" data-color="4" style="background-color: #704f3f;" disabled></button>
+        <button class="color" data-color="5" style="background-color: #FFF8DC;" disabled></button>
+        <button class="color" data-color="6" style="background-color: #FFFFFF;" disabled></button>
+        <!-- Más colores -->
+    </div>
+
+    <!-- Aquí va el oso en pixel art -->
+    <div id="pixel-grid" class="pixel-grid"></div>
+
+
+    <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>  
+    <script src="../Libs/Jquery/jquery-3.7.1.min.js"></script>
+    <script src="Actividad 1.js"></script>
+</body>
+</html>

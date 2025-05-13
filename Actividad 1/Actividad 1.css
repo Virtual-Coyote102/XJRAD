@@ -1,0 +1,81 @@
+.actividad {
+  padding: 1rem;
+}
+.problemas label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.colores {
+  margin: 1rem 0;
+}
+.color {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.color.unlocked {
+  opacity: 1;
+  border: 2px solid black;
+}
+#pixel-art {
+  display: grid;
+  grid-template-columns: repeat(10, 20px);
+  gap: 2px;
+}
+.pixel {
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.pixel.coloreado {
+  cursor: default;
+}
+
+.pixel-grid {
+  display: grid;
+  grid-template-columns: repeat(16, 20px);
+  grid-template-rows: repeat(16, 20px);
+  gap: 1px;
+  margin-top: 1rem;
+}
+.pixel {
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.pixel[data-num='0'] {
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+.coloreado {
+  pointer-events: none;
+}
+
+.pixel {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #555;
+}
+
+.pixel[data-num="1"].unlocked { background-color: #5C4033	; } /* Marrón oscuro */
+.pixel[data-num="2"].unlocked { background-color: #D2B48C	; } /* Marrón claro */
+.pixel[data-num="3"].unlocked { background-color: #000000; } /* Negro */
+.pixel[data-num="4"].unlocked { background-color: #704f3f	; } /* Rosa claro */
+.pixel[data-num="5"].unlocked { background-color: #FFF8DC	; } /* Beige claro */
+.pixel[data-num="6"].unlocked { background-color: #ffffff	; } /* Blanco */
+
+
