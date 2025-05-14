@@ -1,0 +1,94 @@
+#numeros, #cajas {
+  min-height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#numeros .numero{
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.numero {
+  background-color: #D2B48C;
+  color: #000;
+  cursor: grab;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.caja.llena {
+  border: 2px solid #5C4033;
+  background-color: #e0e0e0;
+}
+
+.correcto {
+  background-color: #c8e6c9 !important;
+}
+
+#cajas .caja {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fffef2;
+  border: 2px dashed #999;
+  border-radius: 10px;
+  user-select: none;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+#numeros, #cajas {
+  min-height: 100px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.caja:hover {
+  background-color: #f0f8ff;
+}
+
+.caja:empty::before {
+  content: attr(data-placeholder);
+  color: #bbb;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 60px;
+}
+
+#referencia div {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 10px;
+  background-color: #D2B48C;
+  color: #000;
+  user-select: none;
+}
+
+#inputs input {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+}
+
+#inputs input.correcto {
+  background-color: #c8e6c9;
+}
+
+#inputs input.incorrecto {
+  background-color: #ffcdd2;
+}
