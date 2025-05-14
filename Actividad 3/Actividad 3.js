@@ -1,0 +1,22 @@
+function verificarRespuestas() {
+  const respuestas = ["17", "2", "15", "18", "7", "50"];
+  const inputs = document.querySelectorAll(".input input");
+  let correctas = 0;
+
+  inputs.forEach((input, i) => {
+    const valor = input.value.trim().replace(/^0+/, ""); // elimina espacios y ceros iniciales
+    if (valor === respuestas[i]) {
+      input.style.backgroundColor = "#c8e6c9"; // verde claro
+      correctas++;
+    } else {
+      input.style.backgroundColor = "#ffcdd2"; // rojo claro
+    }
+  });
+
+  if (correctas === respuestas.length) {
+    setTimeout(() => {
+      alert("¡Correcto! Has completado el crucigrama matemático.");
+      window.location.href = "../Tablero_Alumno/tablero_alumno.html";
+    }, 500);
+  }
+}

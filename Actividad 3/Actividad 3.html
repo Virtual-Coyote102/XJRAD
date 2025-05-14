@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="Actividad 3.css">
+    <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
+</head>
+
+<body class="math-bg">
+  <div class="container mt-5">
+    <div class="seccion">
+      <div class="seccion-header seccion-morado d-flex justify-content-between align-items-center">
+        <h2>Actividad 3 - Crucigrama Matemático</h2>
+        <a href="../Tablero_Alumno/tablero_alumno.html" style="color: white; text-decoration: none;">←</a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" style="margin: 1rem;">Escribe los números faltantes para completar las operaciones</h5>
+        <div class="crucigrama" style="margin: 1rem;">
+          <!-- Rejilla 7x7 bien alineada -->
+          <!-- Fila 0 -->
+          <div class="celda fija">5</div>
+          <div class="celda fija">+</div>
+          <div class="celda fija">13</div>
+          <div class="celda fija">-</div>
+          <div class="celda fija">1</div>
+          <div class="celda fija">=</div>
+          <div class="celda input"><input maxlength="2"></div>
+
+          <!-- Fila 1 -->
+          <div class="celda fija">x</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">-</div> <!--<input maxlength="2">-->
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">+</div>
+
+          <!-- Fila 2 -->
+          <div class="celda fija">3</div>
+          <div class="celda fija">-</div>
+          <div class="celda input"><input maxlength="2"></div>
+          <div class="celda fija">+</div>
+          <div class="celda fija">7</div>
+          <div class="celda fija">=</div>
+          <div class="celda fija">8</div>
+
+          <!-- Fila 3 -->
+          <div class="celda fija">=</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">+</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">+</div>
+
+          <!-- Fila 4 -->
+          <div class="celda input"><input maxlength="2"></div>
+          <div class="celda fija">-</div>
+          <div class="celda fija">7</div>
+          <div class="celda fija">=</div>
+          <div class="celda fija">8</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">25</div>
+
+          <!-- Fila 5 -->
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">=</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">VACIO</div>
+          <div class="celda fija">=</div>
+
+          <!-- Fila 6 -->
+          <div class="celda fija">75</div>
+          <div class="celda fija">=</div>
+          <div class="celda input"><input maxlength="2"></div>
+          <div class="celda fija">+</div>
+          <div class="celda input"><input maxlength="2"></div>
+          <div class="celda fija">+</div>
+          <div class="celda input"><input maxlength="2"></div>
+        </div>
+
+        <div class="mt-3">
+          <button class="btn btn-success" onclick="verificarRespuestas()">Verificar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../Libs/Jquery/jquery-3.7.1.min.js"></script>
+  <script src="Actividad 3.js"></script>
+</body>
+</html>
