@@ -1,76 +1,158 @@
+/* Contenedor de la actividad */
 .actividad {
-  padding: 1rem;
+  padding: 2rem;
+  background-color: #fffdfa;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
 }
+
+/* Texto descriptivo */
+.actividad h4 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Problemas matemáticos */
 .problemas label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3e2723;
 }
+
+.problemas input[type="number"] {
+  width: 80px;
+  padding: 6px;
+  margin-left: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problemas input[type="number"]:focus {
+  outline: none;
+  border-color: #8e6e53;
+  box-shadow: 0 0 5px rgba(140, 98, 57, 0.3);
+}
+
+/* Contenedor de botones de color */
 .colores {
-  margin: 1rem 0;
+  margin: 2rem 0 1rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-left: 28.3rem;
 }
+
+/* Botones de colores bloqueados */
 .color {
-  width: 35px;
-  height: 35px;
-  border: 2px solid black;
-  margin-right: 8px;
-  opacity: 0.3; /* apariencia bloqueada */
-  background-color: gray; /* todos inician grises */
-  color: white;
-  font-weight: bold;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #00ccff;
+  border-radius: 6px;
+  opacity: 0.3;
+  background-color: gray;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: not-allowed;
+  transition: transform 0.2s ease;
+  color: #00e1ff;
+  font-weight: bold;
 }
+
+/* Botones desbloqueados */
 .color.unlocked {
   opacity: 1;
   cursor: pointer;
-  border: 2px solid black;
+  transform: scale(1);
 }
-#pixel-art {
-  display: grid;
-  grid-template-columns: repeat(10, 20px);
-  gap: 2px;
+
+.color.unlocked:hover {
+  transform: scale(1.1);
 }
-.pixel.coloreado {
-  cursor: default;
-}
+
+/* Pixel Art Grid */
 .pixel-grid {
   display: grid;
-  grid-template-columns: repeat(16, 35px); /* ajustado al nuevo tamaño */
+  grid-template-columns: repeat(16, 35px);
   grid-template-rows: repeat(16, 35px);
-  gap: 1px;
-  margin-top: 1rem;
+  gap: 2px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
 }
-.pixel[data-num='0'] {
+
+/* Cada pixel */
+.pixel {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #bbb;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.pixel:hover {
+  transform: scale(1.05);
+}
+
+/* Pixeles bloqueados o ya coloreados */
+.pixel.coloreado,
+.pixel[data-num="0"] {
   background-color: transparent;
   border: none;
   cursor: default;
 }
+
+/* Desactiva interacción después de pintar */
 .coloreado {
   pointer-events: none;
 }
 
-.pixel {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ccc;
-  background-color: #eee;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  color: #555;
-  cursor: pointer;
+/* Pixeles desbloqueados con color */
+.pixel[data-num="1"].unlocked { background-color: #5C4033; }  /* Marrón oscuro */
+.pixel[data-num="2"].unlocked { background-color: #D2B48C; }  /* Marrón claro */
+.pixel[data-num="3"].unlocked { background-color: #000000; }  /* Negro */
+.pixel[data-num="4"].unlocked { background-color: #704f3f; }  /* Rosa claro */
+.pixel[data-num="5"].unlocked { background-color: #FFF8DC; }  /* Beige claro */
+.pixel[data-num="6"].unlocked { background-color: #FFFFFF; }  /* Blanco */
+
+/* Fondo general */
+.math-bg {
+  background: #eaf6ff;
+  min-height: 100vh;
+  padding-top: 40px;
 }
 
+/* Encabezado de sección */
+.seccion-header {
+  padding: 20px 25px;
+  border-radius: 12px 12px 0 0;
+  background-color: #6f42c1;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
 
-.pixel[data-num="1"].unlocked { background-color: #5C4033	; } /* Marrón oscuro */
-.pixel[data-num="2"].unlocked { background-color: #D2B48C	; } /* Marrón claro */
-.pixel[data-num="3"].unlocked { background-color: #000000; } /* Negro */
-.pixel[data-num="4"].unlocked { background-color: #704f3f	; } /* Rosa claro */
-.pixel[data-num="5"].unlocked { background-color: #FFF8DC	; } /* Beige claro */
-.pixel[data-num="6"].unlocked { background-color: #ffffff	; } /* Blanco */
+.seccion-header h2 {
+  margin: 0;
+  font-weight: 600;
+}
 
+.seccion {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
 
+.Texto {
+  text-align: center;
+}
