@@ -25,10 +25,20 @@
         <label>Contraseña
           <input type="password" placeholder="Contraseña" class="input">
         </label>
+        <label>Fecha de nacimiento
+          <input type="date" class="input">
+        </label>
+        <label>Grado Actual
+          <input type="range" min="1" max="6" class="input" value="1" onchange="show_value(this.value)">
+          <span id="slider_value" style="color:rgb(0, 0, 0);"></span>
+        </label>
         <button type="submit" class="boton indigo">Registrarse</button>
         <a href="../Registro_Maestro/registro_maestro.html" style="font-size: 0.875rem; color: #2563eb;">¿Eres maestro? Regístrate aqui</a>
       </form>
     </div>
   </div>
+
+  <script src="../Libs/Jquery/jquery-3.7.1.min.js"></script>
+  <script src="Regristro Alumno.js"></script>
 </body>
 </html>

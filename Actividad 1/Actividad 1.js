@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   const osoMatriz = [
     [5,5,5,5,1,1,1,5,5,1,1,1,5,5,5,5],
     [5,5,5,1,1,2,2,1,1,2,2,1,1,5,5,5],
@@ -12,10 +12,7 @@ $(document).ready(function() {
     [5,5,1,2,2,2,4,4,4,4,2,2,2,1,5,5],
     [5,5,5,1,2,2,2,2,2,2,2,2,1,5,5,5],
     [5,5,5,5,1,2,2,2,2,2,2,1,5,5,5,5],
-    [5,5,5,5,5,1,1,1,1,1,1,5,5,5,5,5],
-    [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
-    [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
-    [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
+    [5,5,5,5,5,1,1,1,1,1,1,5,5,5,5,5]
   ];
 
   const $grid = $("#pixel-grid");
@@ -52,8 +49,10 @@ $(document).ready(function() {
   let colorActivo = null;
 
   // Evento para verificar respuestas solo al presionar Enter
-  $("input").on("keydown", function(event) {
+  $("input").on("keydown", function (event) {
     if (event.keyCode === 13) {
+      event.preventDefault();
+
       const color = $(this).data("color");
       const valor = parseInt($(this).val());
 
@@ -68,19 +67,24 @@ $(document).ready(function() {
         });
         $btn.text(color);
       } else {
-        alert("Respuesta incorrecta, inténtalo de nuevo.");
+        Swal.fire({
+          title: "Ups",
+          text: "La respuesta es incorrecta",
+          icon: "error",
+          confirmButtonText: "Reintentar"
+        });
         $(this).val(""); // Limpiar campo
       }
     }
   });
 
   // Seleccionar color activo
-  $(".color").on("click", function() {
+  $(".color").on("click", function () {
     colorActivo = $(this).data("color");
   });
 
   // Pintar píxeles si el color es correcto
-  $("#pixel-grid").on("click", ".pixel", function() {
+  $("#pixel-grid").on("click", ".pixel", function () {
     const requerido = $(this).data("num");
     if (colorActivo == requerido) {
       const $colorBtn = $(`.color[data-color='${colorActivo}']`);
@@ -101,8 +105,14 @@ $(document).ready(function() {
 
     if (coloreados === total) {
       setTimeout(() => {
-        alert("¡Muy bien! Has completado el dibujo.");
-        window.location.href = "../Tablero_Alumno/tablero_alumno.html";
+        Swal.fire({
+          title: "¡Felicidades!",
+          text: "Has completado la actividad!",
+          icon: "success",
+          confirmButtonText: "Volver"
+        }).then(() => {
+          window.location.href = "../Tablero_Alumno/tablero_alumno.html";
+        });
       }, 100);
     }
   }

@@ -17,8 +17,7 @@ $(document).ready(function () {
   // Verificar orden y duplicados
   $("#verificar").on("click", function () {
     const valores = [];
-    let hayRepetidos = false;
-
+    
     $("#inputs input").each(function () {
       const val = parseInt($(this).val());
       if (!isNaN(val)) valores.push(val);
@@ -27,36 +26,61 @@ $(document).ready(function () {
     // Comprobar repetidos
     const sinRepetidos = new Set(valores);
     if (sinRepetidos.size !== valores.length) {
-      alert("Hay números repetidos. Intenta de nuevo.");
+      Swal.fire({
+        title: "Espera",
+        text: "No debes repetir números",
+        icon: "warning",
+        confirmButtonText: "Reintentar"
+      });
       return;
     }
 
     // Comprobar si todos los números están incluidos
-    if (!numeros.every(n => valores.includes(n))) {
-      alert("Debes usar todos los números mostrados.");
+    const todosPresentes = numeros.every(n => valores.includes(n));
+    if (!todosPresentes || valores.length !== numeros.length) {
+      Swal.fire({
+        title: "Faltan números",
+        text: "Debes usar todos los números mostrados",
+        icon: "warning",
+        confirmButtonText: "Intentar de nuevo"
+      });
       return;
     }
 
     // Comprobar orden
-    const estaOrdenado = valores.every((val, i, arr) => i === 0 || arr[i - 1] <= val);
+    const ordenCorrecto = [...numeros].sort((a, b) => a - b);
+    const estaOrdenado = valores.every((val, i) => val === ordenCorrecto[i]);
 
+    // Estilo visual por caja
     $("#inputs input").each(function (i) {
       $(this).removeClass("correcto incorrecto");
       const val = parseInt($(this).val());
-      if (val === numeros.slice().sort((a, b) => a - b)[i]) {
+      if (val === ordenCorrecto[i]) {
         $(this).addClass("correcto");
       } else {
         $(this).addClass("incorrecto");
       }
     });
 
+    // Resultado final
     if (estaOrdenado) {
       setTimeout(() => {
-        alert("¡Muy bien! Has ordenado los números correctamente.");
-        window.location.href = "../Tablero_Alumno/tablero_alumno.html";
+        Swal.fire({
+          title: "¡Felicidades!",
+          text: "Has completado la actividad!",
+          icon: "success",
+          confirmButtonText: "Volver"
+        }).then(() => {
+          window.location.href = "../Tablero_Alumno/tablero_alumno.html";
+        });
       }, 100);
     } else {
-      alert("Hay un error en el orden. Intenta de nuevo.");
+      Swal.fire({
+        title: "Ups",
+        text: "Revisa el orden de los números",
+        icon: "error",
+        confirmButtonText: "Reintentar"
+      });
     }
   });
 });
