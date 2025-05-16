@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../estilos.css">
     <link rel="stylesheet" href="../Libs/Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="Administrador_clases.css">
+    <link rel="stylesheet" href="../Tablero_Alumno/Tablero Alumno.css">
 </head>
 
 <body class="math-bg">
@@ -95,21 +96,26 @@
             <table class="table table-bordered table-striped align-middle text-center">
                 <thead class="table-warning">
                 <tr>
-                    <th># Actividad</th>
+                    <th>Nombre de Actividad</th>
                     <th>Calificación Promedio</th>
                     <th>Tiempo Promedio</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
+                    <td>Descubre La Figura</td>
                     <td>92</td>
                     <td>5:45 minutos</td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td>Ordena Los Números</td>
                     <td>88</td>
                     <td>7 minutos</td>
+                </tr>
+                <tr>
+                    <td>Crucigrama Matemático</td>
+                    <td>92</td>
+                    <td>5:45 minutos</td>
                 </tr>
                 </tbody>
                 </table>
@@ -117,8 +123,34 @@
 
         <div><!--Actividades disponibles botones para activar/desactivar actividad-->
             <h3>Actividades</h3>
-             <button type="submit" class="boton blanco">Actividad 1</button>
-             <button type="submit" class="boton blanco">Actividad 2</button>
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <thead class="table-warning">
+                <tr>
+                    <th>Nombre de Actividad</th>
+                    <th>Ver Actividades</th>
+                    <th>Activar Actividad</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Descubre La Figura</td>
+                    <td><a href="../Actividad 1/Actividad 1.html" class="boton blanco">Click Aquí</a></td>
+                    <td><input type="checkbox" name="" id="" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Ordena Los Números</td>
+                    <td><a href="../Actividad 2/Actividad 2.html" class="boton blanco">Click Aquí</a></td>
+                    <td><input type="checkbox" name="" id="" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Crucigrama Matemático</td>
+                    <td><a href="../Actividad 3/Actividad 3.html" class="boton blanco">Click Aquí</a></td>
+                    <td><input type="checkbox" name="" id="" class="checkbox"></td>
+                </tr>
+                </tbody>
+                </table>
+        </div>
         </div>
 
         <div><!--Boton de Eliminar clase-->
@@ -203,21 +235,26 @@
             <table class="table table-bordered table-striped align-middle text-center">
                 <thead class="table-warning">
                 <tr>
-                    <th># Actividad</th>
+                    <th>Nombre de Actividad</th>
                     <th>Calificación Promedio</th>
                     <th>Tiempo Promedio</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
+                    <td>Descubre La Figura</td>
                     <td>92</td>
                     <td>5:45 minutos</td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td>Ordena Los Números</td>
                     <td>88</td>
                     <td>7 minutos</td>
+                </tr>
+                <tr>
+                    <td>Crucigrama Matemático</td>
+                    <td>92</td>
+                    <td>5:45 minutos</td>
                 </tr>
                 </tbody>
                 </table>
@@ -225,9 +262,36 @@
 
         <div><!--Actividades disponibles botones para activar/desactivar actividad-->
             <h3>Actividades</h3>
-             <button type="submit" class="boton blanco">Actividad 1</button>
-             <button type="submit" class="boton blanco">Actividad 2</button>
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle text-center">
+                <thead class="table-warning">
+                <tr>
+                    <th>Nombre de Actividad</th>
+                    <th>Ver Actividades</th>
+                    <th>Activar Actividad</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Descubre La Figura</td>
+                    <td><a href="../Actividad 1/Actividad 1.html" class="boton blanco">Click Aquí</a></td>
+                    <td><input type="checkbox" name="" id="" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Ordena Los Números</td>
+                    <td><a href="../Actividad 2/Actividad 2.html" class="boton blanco">Click Aquí</a></td>
+                    <td><input type="checkbox" name="" id="" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Crucigrama Matemático</td>
+                    <td><a href="../Actividad 3/Actividad 3.html" class="boton blanco">Click Aquí</a></td>
+                    <td><input type="checkbox" name="" id="" class="checkbox"></td>
+                </tr>
+                </tbody>
+                </table>
         </div>
+        </div>
+
 
         <div><!--Boton de Eliminar clase-->
             <h3>Eliminar Clase</h3>
@@ -235,13 +299,29 @@
         </div>
         </article>
     </div>
+    </div>
 
     
     </div> <!--Añadir Clase-->
-    <button style="margin: 1rem;" class="boton blanco btn-sm">Añadir Nueva Clase</button></td>
+    <button style="margin: 1rem;" onclick="abrirPopup()" class="boton blanco">Añadir Clase</button>
+
+    <!-- Pop-up -->
+    <div id="crearClase" class="popup-overlay">
+      <div class="popup-contenido">
+        <h4>Nombre de Clase</h4>
+        <input type="text" id="nombreClase" class="form-control mb-3" placeholder="#########">
+        <h4>Grado Educativo</h4>
+        <span style="display: inline-flex; align-items: center;">
+        <input id="gradoClase" type="range" min="1" max="6" class="input" value="1" onchange="show_value(this.value)">
+        <span id="slider_value" style="margin-left: 0.5rem; color:rgb(0, 0, 0);"></span>
+        </span>  <br>
+        <button onclick="cerrarPopup('crearClase')" class="boton blanco" style="margin-top: 1rem;">Crear Clase</button>
+      </div>
+    </div>
   </div>
 
   <script src="../Libs/Bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../Libs/Jquery/jquery-3.7.1.min.js"></script>
   <script src="Administrador_clases.js"></script>
 </body>
 </html>

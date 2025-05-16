@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablero Alumno</title>
     <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="Tablero Alumno.css">
 </head>
 
 <body class="math-bg">
@@ -25,12 +26,35 @@
         </label>
         <a href="../Clases_Alumno/Clases_alumno.html" class="boton indigo">Ver Clases</a>
 
-        <a href="#" class="boton indigo">Actividades</a>
+      <!-- Botón para abrir el pop-up -->
+    <button onclick="abrirPopup('registroClase')" class="boton indigo">Registrar Clase</button>
 
-        <button type="submit" class="boton indigo">Cambiar Datos Personales</button>
-
-        <button type="submit" class="boton indigo">Registrar Clase</button>
+    <!-- Pop-up -->
+    <div id="registroClase" class="popup-overlay">
+      <div class="popup-contenido">
+        <h4>Ingresa el código de la clase</h4>
+        <input type="text" id="codigoClase" class="form-control mb-3" placeholder="#########">
+        <button onclick="cerrarPopup('registroClase')" class="boton indigo">Aceptar</button>
+      </div>
     </div>
+
+    <!-- Botón para abrir el pop-up -->
+    <button onclick="abrirPopup('cambioDatos')" class="boton indigo">Cambiar Datos Personales</button>
+
+    <!-- Pop-up -->
+    <div id="cambioDatos" class="popup-overlay">
+      <div class="popup-contenido">
+        <h4>Ingresa tu nombre</h4>
+        <input type="text" id="nuevoNombre" class="form-control mb-3" placeholder="#########">
+        <h4>Ingresa una nueva contraseña</h4>
+        <input type="text" id="nuevaClave" class="form-control mb-3" placeholder="#########"><br>
+        <button onclick="cerrarPopup('cambioDatos')" class="boton indigo" style="margin-top: 1rem;">Aceptar Cambios</button>
+      </div>
+    </div>
+
+   </div>
   </div>
+
+  <script src="Tablero Alumno.js"></script>
 </body>
 </html>

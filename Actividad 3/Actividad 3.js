@@ -27,7 +27,7 @@ function verificarRespuestas() {
           icon: "success",
           confirmButtonText: "Volver"
         }).then(() => {
-          window.location.href = "../Tablero_Alumno/tablero_alumno.html";
+          window.location.href = "../Clases_Alumno/Clases_alumno.html";
         });
       }, 100);
   }

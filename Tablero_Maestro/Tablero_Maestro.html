@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablero Maestro</title>
     <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../Tablero_Alumno/Tablero Alumno.css">
 </head>
 
 <body class="math-bg">
@@ -30,8 +31,24 @@
 
         <a href="../Lista_Alumnos/Lista_alumnos.html" class="boton blanco">Ver Alumnos</a>
 
-        <button type="submit" class="boton blanco">Cambiar Datos Personales</button>
+    <button onclick="abrirPopup()" class="boton blanco">Cambiar Datos Personales</button>
+
+    <!-- Pop-up -->
+    <div id="cambioDatos" class="popup-overlay">
+      <div class="popup-contenido">
+        <h4>Ingresa tu nombre</h4>
+        <input type="text" id="nuevoNombre" class="form-control mb-3" placeholder="#########">
+        <h4>Ingresa tu correo</h4>
+        <input type="text" id="nuevoCorreo" class="form-control mb-3" placeholder="#########">
+        <h4>Ingresa una nueva contraseña</h4>
+        <input type="text" id="nuevaClave" class="form-control mb-3" placeholder="#########"><br>
+        <button onclick="cerrarPopup('cambioDatos')" class="boton blanco" style="margin-top: 1rem;">Aceptar Cambios</button>
+      </div>
+    </div>
+
     </div>
   </div>
+
+  <script src="Tablero Maestro.js"></script>
 </body>
 </html>
